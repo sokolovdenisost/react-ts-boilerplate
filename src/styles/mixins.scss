@@ -31,7 +31,7 @@ $mobileScreenSize: 360;
 
 @mixin clickableArea($size) {
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: size(-$size);
     bottom: size(-$size);
