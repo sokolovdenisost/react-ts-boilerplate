@@ -1,0 +1,15 @@
+@import 'styles/fonts.scss';
+@import 'styles/colors.scss';
+@import 'styles/mixins.scss';
+
+body {
+  @include f('normal');
+  color: $black;
+  background-color: $white;
+  --screen-size: #{$baseScreenSize};
+
+  @include mobile {
+    @include f('m/normal');
+    --screen-size: #{$mobileScreenSize};
+  }
+}

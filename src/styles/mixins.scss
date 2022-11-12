@@ -1,0 +1,54 @@
+@import 'styles/colors.scss';
+
+$baseScreenSize: 1440;
+$mobileScreenSize: 360;
+
+@function size($pixels) {
+  @return calc(((#{$pixels} / var(--screen-size)) * 100) * 1vw);
+}
+
+@mixin resizeMod($size) {
+  --screen-size: #{$baseScreenSize} * #{$size};
+}
+
+@mixin desktop() {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin clickableArea($size) {
+  &:after {
+    content: "";
+    position: absolute;
+    top: size(-$size);
+    bottom: size(-$size);
+    left: size(-$size);
+    right: size(-$size);
+  }
+}
+
+@mixin bg($url, $size: contain, $position: center, $repeat: no-repeat) {
+  background-image: url(#{'/images/'} + $url);
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position;
+}
+
+@mixin grid($rows, $gap) {
+  display: grid;
+  grid-template-columns: repeat($rows, 1fr);
+  grid-gap: $gap;
+}

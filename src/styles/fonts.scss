@@ -1,0 +1,9 @@
+$font: 'Arial', 'sans-serif';
+
+@mixin f($type) {
+  @if $type == 'normal' {
+
+  } @else if $type == 'm/normal' or $type == 'm/normal link' {
+
+  }
+}
