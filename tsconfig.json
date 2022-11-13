@@ -24,7 +24,8 @@
       "styles/*": ["./src/styles/*"],
       "hooks/*": ["./src/hooks/*"],
       "types/*": ["./src/types/*"],
-      "api/*": ["./src/api/*"]
+      "api/*": ["./src/api/*"],
+      "images/*": ["./src/assets/images"],
     }
   },
   "include": ["src"],

@@ -15,6 +15,7 @@ export default defineConfig({
       hooks: path.resolve(__dirname, 'src/hooks'),
       types: path.resolve(__dirname, 'src/types'),
       api: path.resolve(__dirname, 'src/api'),
+      images: path.resolve(__dirname, 'src/assets/images'),
     },
   },
 })
