@@ -16,6 +16,7 @@ export default defineConfig({
       types: path.resolve(__dirname, 'src/types'),
       api: path.resolve(__dirname, 'src/api'),
       images: path.resolve(__dirname, 'src/assets/images'),
+      store: path.resolve(__dirname, 'src/store/images'),
     },
   },
 })
